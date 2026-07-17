@@ -10,11 +10,17 @@ environments and a reproducible environment to run the built binary from.
 
 # Features
 - CMake support.
+- Docker build.
 - Reproducible builds.
     - Reproducible build and runtime environment.
         - Nix support (packaged as a Nix Flake.)
-    - Fully statically linked.
+    - Full static linking (optional).
         - Linked against `musl`.
+- Continuous integration tasks using GitHub Actions
+    - Formatting action.
+    - Docker build action.
+    - Ubuntu build and run action.
+    - Nix build action.
 
 ## License
 This project is licensed under the 
