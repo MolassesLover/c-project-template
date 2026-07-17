@@ -1,0 +1,14 @@
+name: "Docker Compose"
+on:
+  pull_request:
+  push:
+jobs:
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        submodules: recursive
+    - uses: docker/setup-compose-action@v2
+    - name: Run using Docker Compose
+      run: docker compose up --build --force-recreate

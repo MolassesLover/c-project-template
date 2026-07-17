@@ -1,0 +1,11 @@
+services:
+  build:
+    image: program/nix:latest
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: ./
+        target: /opt/workdir
+    tty: true
+    command: /bin/sh -c "nix build ."

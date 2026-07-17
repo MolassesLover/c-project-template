@@ -1,0 +1,22 @@
+name: "Main"
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        submodules: recursive
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install swig cmake clang musl
+    - name: Build
+      run: |
+        cmake -B target/release -D CMAKE_BUILD_TYPE=Release
+        cmake --build target/release -j$(nproc)
+    - name: Test Run
+      run: |
+        cd target/release/tests
+        ./program
