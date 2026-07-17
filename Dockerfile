@@ -4,8 +4,8 @@ RUN nix-channel --update && echo "experimental-features = nix-command flakes" > 
 
 COPY ./flake.nix ./flake.lock /program-cache-warmup/
 COPY ./misc/nix /program-cache-warmup/misc/nix
-COPY ./apps /program-cache-warmup/apps
-COPY ./core /program-cache-warmup/core
+COPY ./src /program-cache-warmup/src
+COPY ./include /program-cache-warmup/include
 COPY ./CMakeLists.txt /program-cache-warmup/
 
 WORKDIR /program-cache-warmup/

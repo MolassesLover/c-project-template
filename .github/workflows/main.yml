@@ -11,7 +11,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get -y install swig cmake clang musl
+        sudo apt-get -y install swig cmake clang musl musl-tools
     - name: Build
       run: |
         cmake -B target/release -D CMAKE_BUILD_TYPE=Release
