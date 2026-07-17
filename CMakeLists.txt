@@ -18,8 +18,6 @@ set(PROGRAM_FLAGS_BASE "-O2 -fPIC -Wall -Wextra -Werror -Wno-unused-command-line
 set(CMAKE_C_FLAGS "${PROGRAM_FLAGS_BASE}")
 set(CMAKE_CXX_FLAGS "${PROGRAM_FLAGS_BASE}")
 
-set(CMAKE_C_COMPILER "musl-clang")
-
 set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 set(BUILD_SHARED_LIBS OFF)
 
