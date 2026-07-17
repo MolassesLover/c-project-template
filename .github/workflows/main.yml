@@ -18,5 +18,5 @@ jobs:
         cmake --build target/release -j$(nproc)
     - name: Test Run
       run: |
-        cd target/release/tests
+        cd target/release
         ./program
