@@ -30,4 +30,4 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v6
-      - uses: SyrupMedia/nix-flake-update@38f873317ced8a1d88cecea81a7e4000816ce9d0
+      - uses: SyrupMedia/nix-flake-update@v1
